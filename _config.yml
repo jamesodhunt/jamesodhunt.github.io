@@ -1,3 +1,5 @@
+repository: jamesodhunt/jamesodhunt.github.io
+output: web
 name: James Hunt
 description: James Hunt's site
 theme: jekyll-theme-hacker
