@@ -14,7 +14,3 @@ whitelist:
 
 # enable the plugin
 - jekyll-redirect-from
-
-redirect_to:
-  - https://github.com/jamesodhunt/procenv
-- 
