@@ -3,3 +3,18 @@ output: web
 name: James Hunt
 description: James Hunt's site
 theme: jekyll-theme-hacker
+
+# XXX: try to redirect to another site
+plugins:
+  - jekyll-redirect-from
+
+# allow plugin to be enabled
+whitelist:
+  - jekyll-redirect-from
+
+# enable the plugin
+- jekyll-redirect-from
+
+redirect_to:
+  - https://github.com/jamesodhunt/procenv
+- 
