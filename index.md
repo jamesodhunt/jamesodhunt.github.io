@@ -7,3 +7,5 @@ redirect_to:
 # Intro
 
 hello world
+
+[Here is another page](test.md).
