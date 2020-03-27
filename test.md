@@ -1,5 +1,5 @@
 - `rust` code:
- {% highlight rust %}
+ {% highlight rust linenos %}
  fn foo() -> Result<()> -> {
    println!("Hello, world");
 
