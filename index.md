@@ -1,5 +1,4 @@
 ---
-title: James Hunt's Site.
 ---
 
 # Learning Python
