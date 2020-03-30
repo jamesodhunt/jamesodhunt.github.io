@@ -18,6 +18,8 @@ defaults:
 
 author:
   name: James Hunt
+  bio: Open Source Software hacker @ Intel.
+  email: jamesodhunt@gmail.com
   links:
     - label: "blog"
       icon: "fab fa-fw fa-blogger"
