@@ -49,3 +49,7 @@ print("Hello Everyone! :-)")
 
   - http://appjar.info/cheatSheets/Turtle%20T3%20CheatSheet.pdf
   - https://www.cs.auckland.ac.nz/courses/compsci111ssc/lectures/LectureSlides/L25_Python3.pdf
+
+- Excellent book on writing games in Python (free to read online, or buy a copy on Amazon!)
+
+  https://inventwithpython.com/invent4thed/
