@@ -19,6 +19,9 @@ defaults:
 author:
   name: James Hunt
   links:
+    - label: "blog"
+      icon: "fab fa-fw fa-blogger"
+      url: "http://ifdeflinux.blogspot.com"
     - label: "instagram"
       icon: "fab fa-fw fa-instagram"
       url: "https://instagram.com/jamesodhunt"
