@@ -9,13 +9,6 @@ toc_label: "Table of Contents"
 print("Hello Everyone! :-)")
 {% endhighlight %}
 
-*Contents*
-
-- TOC
-{:toc}
-
----
-
 ## Setup
 
 ## Software to install
