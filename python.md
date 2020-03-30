@@ -19,7 +19,7 @@ print("Hello Everyone! :-)")
 
 ## Download the class material
 
-- Click on [`python-commoners.zip`](https://drive.google.com/drive/folders/1q4MF0oogMqQcq6PKJln9F5GGA1uvoaPTsetup)
+- Click on [`python-commoners.zip`](https://drive.google.com/open?id=1q4MF0oogMqQcq6PKJln9F5GGA1uvoaPT)
   to download a ZIP file containing all the files you will need.
 
 - Unzip the file to a folder on your computer.
@@ -47,9 +47,9 @@ print("Hello Everyone! :-)")
 
 - Turtle graphics summaries
 
-  - http://appjar.info/cheatSheets/Turtle%20T3%20CheatSheet.pdf
-  - https://www.cs.auckland.ac.nz/courses/compsci111ssc/lectures/LectureSlides/L25_Python3.pdf
+  - [Turtle graphics "cheet sheet"](http://appjar.info/cheatSheets/Turtle%20T3%20CheatSheet.pdf) (1 page)
+  - [Colourful and simple to understand Turtle Graphics presentation](https://www.cs.auckland.ac.nz/courses/compsci111ssc/lectures/LectureSlides/L25_Python3.pdf)
 
-- Excellent book on writing games in Python (free to read online, or buy a copy on Amazon!)
+- [Invent Your Own Computer Games with Python](https://inventwithpython.com/invent4thed)
 
-  https://inventwithpython.com/invent4thed/
+  Excellent book on writing games in Python (free to read online, or support the author and buy a copy on Amazon!)
