@@ -1,7 +1,7 @@
 # Learning Python 
 
-{% highlight python linenos %}
-print("Hello everyone!")
+{% highlight python %}
+print("Hello Everyone! :-)")
 {% endhighlight %}
 
 ## Setup
