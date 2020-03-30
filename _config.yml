@@ -20,7 +20,7 @@ author:
   name: James Hunt
   links:
     - label: "instagram"
-      icon: "instagram"
+      icon: "fab fa-fw fa-instagram"
       url: "https://instagram.com/jamesodhunt"
     - label: "twitter"
       icon: "twitter"
