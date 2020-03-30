@@ -14,3 +14,13 @@ social-network-links:
 
 encoding: UTF-8
 breadcrumbs: true
+
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-include-cache
+
+whitelist:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-include-cache
