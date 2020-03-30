@@ -1,6 +1,6 @@
 title: James Hunt's site
 description: James Hunt's site
-theme: jekyll-theme-minimal
+theme: minimal-mistakes-jekyll
 
 navbar-links:
     Author's home: "http://ifdeflinux.blogspot.com"
