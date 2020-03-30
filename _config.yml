@@ -20,12 +20,15 @@ author:
   name: James Hunt
   bio: Open Source Software hacker
     @ [Intel](https://01.org).
-  email: jamesodhunt@gmail.com
   location: "Earth"
   links:
     - label: "blog"
       icon: "fab fa-fw fa-blogger"
       url: "http://ifdeflinux.blogspot.com"
+
+    - label: "email"
+      icon: "fas fa-envelope-square"
+      url: "mailto:jamesodhunt@gmail.com"
 
     - label: "github"
       icon: "fab fa-fw fa-github"
@@ -42,18 +45,6 @@ author:
     - label: "twitter"
       icon: "fab fa-fw fa-twitter-square"
       url: "https://twitter.com/jamesodhunt"
-
-#sidebar:
-#  - ti#tle: "James Hunt's site"
-
-#navbar-links:
-#    Author's home: "http://ifdeflinux.blogspot.com"
-
-#social-network-links:
-#    email: jamesodhunt@gmail.com
-#    github: jamesodhunt
-#    instagram: jamesodhunt
-#    twitter: jamesodhunt
 
 plugins:
   - jekyll-paginate
