@@ -26,13 +26,14 @@ print("Hello Everyone! :-)")
 
 ## Download the class material
 
-- Click on [`python-commoners.zip`](https://drive.google.com/open?id=1q4MF0oogMqQcq6PKJln9F5GGA1uvoaPT)
-  to download a ZIP file containing all the files you will need.
+- To download the class material:
 
-- Unzip the file to a folder on your computer.
+  1. Click on [this link](https://drive.google.com/open?id=1q4MF0oogMqQcq6PKJln9F5GGA1uvoaPT).
+  1. Right-click on `python-commoners.zip` and select "Download".
+  1. Unzip the file to a folder on your computer.
 
-- If you click on a `.py` Python file in the file manager, the file should
-  open in Thonny.
+  If you have installed Thonny, clicking on a `.py` Python file in the file
+  manager should open that file in Thonny.
 
 ## Reference material
 
