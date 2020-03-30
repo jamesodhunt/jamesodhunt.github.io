@@ -1,15 +1,13 @@
+---
+toc: true
+toc_label: "Table of Contents"
+---
+
 # Learning Python 
 
 {% highlight python %}
 print("Hello Everyone! :-)")
 {% endhighlight %}
-
-*Contents*
-
-- TOC
-{:toc}
-
----
 
 ## Setup
 
