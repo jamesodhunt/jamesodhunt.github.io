@@ -16,10 +16,11 @@ defaults:
 
 author:
   name: James Hunt
-  - label: "instagram"
+  links:
+    - label: "instagram"
       icon: "instagram"
       url: "https://instagram.com/jamesodhunt"
-  - label: "twitter"
+    - label: "twitter"
       icon: "twitter"
       url: "https://twitter.com/jamesodhunt"
 
