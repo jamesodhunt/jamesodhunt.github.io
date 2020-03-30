@@ -3,6 +3,9 @@ description: James Hunt's site
 remote_theme: "mmistakes/minimal-mistakes@4.19.1"
 minimal_mistakes_skin: "default"
 
+encoding: UTF-8
+breadcrumbs: true
+
 defaults:
   - scope:
       path: ""
@@ -11,20 +14,17 @@ defaults:
       layout: single
       author_profile: true
 
-sidebar:
-  - title: "James Hunt's site"
+#sidebar:
+#  - ti#tle: "James Hunt's site"
 
-navbar-links:
-    Author's home: "http://ifdeflinux.blogspot.com"
+#navbar-links:
+#    Author's home: "http://ifdeflinux.blogspot.com"
 
-social-network-links:
-    email: jamesodhunt@gmail.com
-    github: jamesodhunt
-    instagram: jamesodhunt
-    twitter: jamesodhunt
-
-encoding: UTF-8
-breadcrumbs: true
+#social-network-links:
+#    email: jamesodhunt@gmail.com
+#    github: jamesodhunt
+#    instagram: jamesodhunt
+#    twitter: jamesodhunt
 
 plugins:
   - jekyll-paginate
