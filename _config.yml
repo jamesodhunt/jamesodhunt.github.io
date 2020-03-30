@@ -2,5 +2,14 @@ title: James Hunt's site
 description: James Hunt's site
 theme: jekyll-theme-minimal
 
+navbar-links:
+    Author's home: "http://ifdeflinux.blogspot.com"
+
+social-network-links:
+    email: jamesodhunt@gmail.com
+    github: jamesodhunt
+    instagram: jamesodhunt
+    twitter: jamesodhunt
+
 encoding: UTF-8
 breadcrumbs: true
