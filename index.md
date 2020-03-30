@@ -2,6 +2,6 @@
 title: James Hunt's Site.
 ---
 
-# Python
+# Learning Python
 
 Click [here](python.md).
