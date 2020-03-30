@@ -5,7 +5,7 @@ toc_label: "Table of Contents"
 ---
 
 {% highlight python %}
-print("Hello Everyone! :-)")
+print("Hello Everyone!")
 {% endhighlight %}
 
 This page explains what you will need to participate in the Advanced Coding
