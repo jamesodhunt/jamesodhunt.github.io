@@ -27,7 +27,7 @@ author:
       url: "http://ifdeflinux.blogspot.com"
 
     - label: "email"
-      icon: "fas fa-envelope-square"
+      icon: "fas fa-fw fa-envelope-square"
       url: "mailto:jamesodhunt@gmail.com"
 
     - label: "github"
@@ -41,6 +41,10 @@ author:
     - label: "instagram"
       icon: "fab fa-fw fa-instagram"
       url: "https://instagram.com/jamesodhunt"
+
+    - label: "linkedin"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://linkedin.com/in/jamesodhunt"
 
     - label: "twitter"
       icon: "fab fa-fw fa-twitter-square"
