@@ -1,11 +1,7 @@
 ---
-title: foo
-redirect_to:
-  - https://github.com/jamesodhunt/procenv
+title: James Hunt's Site.
 ---
 
-# Intro
+# Python
 
-hello world
-
-[Here is another page](test.md).
+Click [here](python.md).
