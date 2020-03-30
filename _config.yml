@@ -6,6 +6,9 @@ minimal_mistakes_skin: "default"
 encoding: UTF-8
 breadcrumbs: true
 
+include:
+  - ["_pages"]
+
 defaults:
   - scope:
       path: ""
@@ -49,9 +52,6 @@ author:
     - label: "twitter"
       icon: "fab fa-fw fa-twitter-square"
       url: "https://twitter.com/jamesodhunt"
-
-include:
-  - _pages
 
 plugins:
   - jekyll-paginate
