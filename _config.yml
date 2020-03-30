@@ -50,6 +50,9 @@ author:
       icon: "fab fa-fw fa-twitter-square"
       url: "https://twitter.com/jamesodhunt"
 
+include:
+  - _pages
+
 plugins:
   - jekyll-paginate
   - jekyll-sitemap
