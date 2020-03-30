@@ -4,6 +4,13 @@
 print("Hello Everyone! :-)")
 {% endhighlight %}
 
+*Contents*
+
+- TOC
+{:toc}
+
+---
+
 ## Setup
 
 ## Software to install
