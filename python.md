@@ -1,15 +1,14 @@
 ---
+title: Learning Python
 toc: true
 toc_label: "Table of Contents"
 ---
-
-# Learning Python 
 
 {% highlight python %}
 print("Hello Everyone! :-)")
 {% endhighlight %}
 
-## Setup
+# Setup
 
 ## Software to install
 
@@ -33,18 +32,18 @@ print("Hello Everyone! :-)")
   If you have installed Thonny, clicking on a `.py` Python file in the file
   manager should open that file in Thonny.
 
-## Reference material
+# Reference material
 
-### Official Python Documentation
+## Official Python Documentation
 
 - [The Python tutorial](https://docs.python.org/3/tutorial)
 - [Python modules (including Turtle!)](https://docs.python.org/3/library)
 
-### Class documentation
+## Class documentation
 
 - ["challenges", presentations and summaries](https://drive.google.com/open?id=1q4MF0oogMqQcq6PKJln9F5GGA1uvoaPT)
 
-### Other documentation
+## Other documentation
 
 - Python "cheat sheets" (summaries) to print out and stick/pin up somewhere:
 
