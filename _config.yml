@@ -3,6 +3,8 @@ description: James Hunt's site
 remote_theme: "mmistakes/minimal-mistakes@4.19.1"
 minimal_mistakes_skin: "default"
 
+author_profile: true
+
 navbar-links:
     Author's home: "http://ifdeflinux.blogspot.com"
 
