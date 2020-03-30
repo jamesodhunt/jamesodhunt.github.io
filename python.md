@@ -8,6 +8,9 @@ toc_label: "Table of Contents"
 print("Hello Everyone! :-)")
 {% endhighlight %}
 
+This page explains what you will need to participate in the Advanced Coding
+with Python Commoner.
+
 # Setup
 
 ## Software to install
