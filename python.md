@@ -1,3 +1,7 @@
+toc: true
+toc_label: "Table of Contents"
+---
+
 # Learning Python 
 
 {% highlight python %}
