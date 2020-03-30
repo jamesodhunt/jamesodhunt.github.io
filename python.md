@@ -44,7 +44,7 @@ with Python Commoner.
 
 ## Class documentation
 
-- ["challenges", presentations and summaries](https://drive.google.com/open?id=1q4MF0oogMqQcq6PKJln9F5GGA1uvoaPT)
+- [The "challenges", presentations and summaries](https://drive.google.com/open?id=1q4MF0oogMqQcq6PKJln9F5GGA1uvoaPT)
 
 ## Other documentation
 
