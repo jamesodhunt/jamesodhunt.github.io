@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "Home"
 ---
 
 # Learning Python
