@@ -6,6 +6,8 @@ minimal_mistakes_skin: "default"
 encoding: UTF-8
 breadcrumbs: true
 
+# XXX: Seemingly essential, even though GitHub _requires_ all ".md" pages
+# XXX: to be in the top-level directory?
 include:
     - _pages
 
