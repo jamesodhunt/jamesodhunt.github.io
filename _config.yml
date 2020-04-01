@@ -1,5 +1,13 @@
+#---------------------------------------------------------------------
+# Description: GitHub.io website.
+#---------------------------------------------------------------------
+
 #title: James Hunt's site
 #description: James Hunt's site
+
+# GitHub slug
+repository: jamesodhunt/jamesodhunt.github.io
+
 remote_theme: "mmistakes/minimal-mistakes@4.19.1"
 minimal_mistakes_skin: "default"
 
