@@ -61,9 +61,9 @@ copy_site()
     local dir
     for dir in "$site_dir" "$bundle_dir"
     do
-        [ -z "$dir" ] && continue
-        [ "$dir" = "/" ] && continue
-        echo "$dir" | grep -q ^/tmp || continue
+        [ -z "$dir" ] && die "invalid directory"
+        [ "$dir" = "/" ] && die "directory cannot be root"
+        echo "$dir" | grep -q ^/tmp || die "directory should be temporary"
 
         sudo rm -rf "$dir"
     done
@@ -71,7 +71,10 @@ copy_site()
     mkdir -p "$site_dir" "$bundle_dir"
 
     rsync -auvz --exclude=".git" "$src" "${site_dir}/"
-    chmod 777 -R "${site_dir}"
+
+    # XXX: Yes, this *is* required to avoid weird EPERM errors due
+    # XXX: to podman using a different user (ns) to "$USER".
+    sudo chmod 777 -R "${site_dir}"
 
     pushd "$site_dir"
     rm -f "Gemfile.lock"
@@ -145,10 +148,10 @@ handle_site()
 
     local container_bundle_dir="/usr/local/bundle"
 
+    copy_site "$src" "$site_dest" "$bundle_dest"
+
     if [ "$cmd" = "build" ] || [ "$cmd" = "serve" ]
     then
-        copy_site "$src" "$site_dest" "$bundle_dest"
-
         info "building site"
 
         build_container \

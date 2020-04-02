@@ -2,6 +2,9 @@
 # Description: GitHub.io website.
 #---------------------------------------------------------------------
 
+# Used for footer copyright
+name: "James Hunt"
+
 #title: James Hunt's site
 #description: James Hunt's site
 
