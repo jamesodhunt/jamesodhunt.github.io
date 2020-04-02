@@ -118,6 +118,8 @@ run_container()
     local container_jekyll_site_dir="$4"
     local container_bundle_dir="$5"
 
+    # XXX: Note the port specification - only serve to the
+    # XXX: specified host!
     podman run -it --rm --name jekyll \
         -v "${site_dest}:${container_jekyll_dir}:rw,z" \
         -v "${bundle_dest}:${container_bundle_dir}:rw,z" \
