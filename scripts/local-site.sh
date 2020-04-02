@@ -121,15 +121,18 @@ run_container()
     local container_jekyll_site_dir="$4"
     local container_bundle_dir="$5"
 
-    # XXX: Note the port specification - only serve to the
-    # XXX: specified host!
+    # XXX: Notes:
+    # XXX:
+    # XXX: - The port specification - only serve to the specified host!
+    # XXX: - The bundle install seems to be required here too!
     podman run -it --rm --name jekyll \
         -v "${site_dest}:${container_jekyll_dir}:rw,z" \
         -v "${bundle_dest}:${container_bundle_dir}:rw,z" \
         -w "${container_jekyll_site_dir}" \
         -p "${host}:${port}:${port}" \
         "${jekyll_image}" \
-        bash -c "bundle exec jekyll serve \
+        bash -c "bundle install && \
+        bundle exec jekyll serve \
         --drafts \
         --config _config.yml,_config-dev.yml \
         --host ${host} \
