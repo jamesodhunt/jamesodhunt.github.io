@@ -47,6 +47,8 @@ setup()
     podman pull "$jekyll_image"
 }
 
+# Podman does weird things to file ownership and permissions
+# so create a copy of the site.
 copy_site()
 {
     local src="$1"
@@ -54,7 +56,17 @@ copy_site()
     local site_dir="$2"
     local bundle_dir="$3"
 
-    rm -rf "$site_dir" "$bundle_dir"
+    info "copying site"
+
+    local dir
+    for dir in "$site_dir" "$bundle_dir"
+    do
+        [ -z "$dir" ] && continue
+        [ "$dir" = "/" ] && continue
+        echo "$dir" | grep -q ^/tmp || continue
+
+        sudo rm -rf "$dir"
+    done
 
     mkdir -p "$site_dir" "$bundle_dir"
 
@@ -64,15 +76,21 @@ copy_site()
     pushd "$site_dir"
     rm -f "Gemfile.lock"
     popd
+
+    info "copyied site"
 }
 
-build_and_run_site()
+build_container()
 {
     local site_dest="$1"
     local bundle_dest="$2"
+    local container_jekyll_dir="$3"
+    local container_jekyll_site_dir="$4"
+    local container_bundle_dir="$5"
 
     local pkgs=()
 
+    # Required Alpine dependencies
     pkgs+=("build-base")
     pkgs+=("gcc")
     pkgs+=("libc-dev")
@@ -82,36 +100,118 @@ build_and_run_site()
     pkgs+=("make")
     pkgs+=("ruby-dev")
 
-    local container_jekyll_dir="/srv/jekyll"
-    local container_jekyll_site_dir="${container_jekyll_dir}/$site_name"
+    podman run -it --rm --name jekyll \
+        -v "${site_dest}:${container_jekyll_dir}:rw,z" \
+        -v "${bundle_dest}:${container_bundle_dir}:rw,z" \
+        -w "${container_jekyll_site_dir}" \
+        "${jekyll_image}" \
+        bash -c "apk --no-cache add --virtual build_deps ${pkgs[*]} && \
+        bundle install && \
+        bundle exec jekyll build --incremental --drafts --config _config.yml,_config-dev.yml"
+}
 
-    local container_bundle_dir="/usr/local/bundle"
+run_container()
+{
+    local site_dest="$1"
+    local bundle_dest="$2"
+    local container_jekyll_dir="$3"
+    local container_jekyll_site_dir="$4"
+    local container_bundle_dir="$5"
 
     podman run -it --rm --name jekyll \
         -v "${site_dest}:${container_jekyll_dir}:rw,z" \
         -v "${bundle_dest}:${container_bundle_dir}:rw,z" \
         -w "${container_jekyll_site_dir}" \
-        -p "${port}:${port}" \
+        -p "${host}:${port}:${port}" \
         "${jekyll_image}" \
-        bash -c "apk --no-cache add --virtual build_deps ${pkgs[*]} && \
-        bundle install && \
-        bundle exec jekyll build --incremental --drafts --config _config.yml,_config-dev.yml && \
-        cd ${container_jekyll_site_dir} && \
-        bundle exec jekyll serve --drafts --config _config.yml,_config-dev.yml --host ${host} --port ${port}"
+        bash -c "bundle exec jekyll serve \
+        --drafts \
+        --config _config.yml,_config-dev.yml \
+        --host ${host} \
+        --port ${port}"
+}
+
+handle_site()
+{
+    local cmd="$1"
+    local src="$2"
+    local site_dest="$3"
+    local bundle_dest="$4"
+
+    local container_jekyll_dir="/srv/jekyll"
+    local container_jekyll_site_dir="${container_jekyll_dir}/$site_name"
+
+    local container_bundle_dir="/usr/local/bundle"
+
+    if [ "$cmd" = "build" ] || [ "$cmd" = "serve" ]
+    then
+        copy_site "$src" "$site_dest" "$bundle_dest"
+
+        info "building site"
+
+        build_container \
+            "${site_dest}" \
+            "${bundle_dest}" \
+            "${container_jekyll_dir}" \
+            "${container_jekyll_site_dir}" \
+            "${container_bundle_dir}"
+
+        info "built site"
+
+        [ "$cmd" = "build" ] && return 0
+    fi
+
+    info "running site"
+
+    run_container \
+        "${site_dest}" \
+        "${bundle_dest}" \
+        "${container_jekyll_dir}" \
+        "${container_jekyll_site_dir}" \
+        "${container_bundle_dir}"
+}
+
+usage()
+{
+    cat <<EOT
+Usage: $script_name [command]
+
+Description: Build and run GitHub.io site locally.
+
+Commands:
+
+  build    : Only build the site.
+  help     : Show this help statement.
+  run      : Only run the site (no build).
+  serve    : Build and run the site [default].
+
+EOT
 }
 
 main()
 {
-    setup
-
     local src="$PWD"
 
     local site_dest="/tmp/site"
     local bundle_dest="/tmp/bundle"
 
-    copy_site "$src" "$site_dest" "$bundle_dest"
+    local cmd="${1:-}"
 
-    build_and_run_site "$site_dest" "$bundle_dest"
+    [ "$cmd" = help ] && usage && exit 0
+
+    [ -z "$cmd" ] && cmd="serve"
+
+    # Validate only
+    case "$cmd" in
+        build) true ;;  # build only
+        run) true ;;    # run only (no build)
+        serve) true ;;  # build and run
+        *) die "invalid command: '$cmd'" ;;
+    esac
+
+    setup
+
+    handle_site "$cmd" "$src" "$site_dest" "$bundle_dest"
 }
 
 main "$@"
