@@ -131,8 +131,7 @@ run_container()
         -w "${container_jekyll_site_dir}" \
         -p "${host}:${port}:${port}" \
         "${jekyll_image}" \
-        bash -c "bundle install && \
-        bundle exec jekyll serve \
+        bash -c "bundle exec jekyll serve \
         --drafts \
         --config _config.yml,_config-dev.yml \
         --host ${host} \

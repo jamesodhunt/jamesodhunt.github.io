@@ -3,9 +3,12 @@
 #---------------------------------------------------------------------
 
 # Used for footer copyright
-name: "James Hunt"
+#name: &name "James Hunt"
 
-#title: James Hunt's site
+#title: *name
+
+title: James Hunt
+
 #description: James Hunt's site
 
 # GitHub slug

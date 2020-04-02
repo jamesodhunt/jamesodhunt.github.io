@@ -28,12 +28,15 @@ with Python Commoner.
 
 - To download the class material:
 
-  1. Click on [this link](https://drive.google.com/open?id=1q4MF0oogMqQcq6PKJln9F5GGA1uvoaPT).
-  1. Right-click on the `python-commoners.zip` file and select "Download".
+  1. Go to the [Google docs folder][google-docs-folder] containing both
+     the documention and Python programs used for the classes.
+  1. Right-click on the "`python-commoners.zip`" file and select "Download".
   1. Unzip the file to a folder on your computer.
 
-  If you have installed Thonny, clicking on a `.py` Python file in the file
+  If you have installed Thonny, clicking on a "`.py`" Python file in the file
   manager should open that file in Thonny.
+
+- Optionally download the [class documentation](#class-documentation).
 
 # Reference material
 
@@ -44,7 +47,17 @@ with Python Commoner.
 
 ## Class documentation
 
-- [The "challenges", presentations and summaries](https://drive.google.com/open?id=1q4MF0oogMqQcq6PKJln9F5GGA1uvoaPT)
+- [The "challenges", presentations and summaries][google-docs-folder]
+
+  View online or download:
+
+  - Download individual files by right-clicking on them.
+  - Left click on the "Python Course" link at the top of the page and then
+    click "Download" to download everything in a single ZIP file.
+
+ > **Hint:**
+ >
+ > Prefer to view online to ensure you see the latest versions!
 
 ## Other documentation
 
@@ -61,3 +74,5 @@ with Python Commoner.
 - [Invent Your Own Computer Games with Python](https://inventwithpython.com/invent4thed)
 
   Excellent book on writing games in Python (free to read online, or support the author and buy a copy on Amazon!)
+
+[google-docs-folder]: https://drive.google.com/open?id=1q4MF0oogMqQcq6PKJln9F5GGA1uvoaPT
