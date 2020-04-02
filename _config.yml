@@ -72,3 +72,8 @@ whitelist:
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-include-cache
+
+exclude:
+  - Gemfile
+  - Makefile
+  - /scripts/
