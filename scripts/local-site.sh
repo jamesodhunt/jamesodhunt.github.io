@@ -56,6 +56,8 @@ copy_site()
     local site_dir="$3"
     local bundle_dir="$4"
 
+    [ "$src" = "$site_dir" ] && die "src and site dir are the same"
+
     info "copying site"
 
     # Start from a clean environment
