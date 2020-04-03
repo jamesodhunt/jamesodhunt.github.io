@@ -51,24 +51,28 @@ setup()
 # so create a copy of the site.
 copy_site()
 {
-    local src="$1"
-
+    local cmd="$1"
+    local src="$2"
     local site_dir="$2"
     local bundle_dir="$3"
 
     info "copying site"
 
-    local dir
-    for dir in "$site_dir" "$bundle_dir"
-    do
-        [ -z "$dir" ] && die "invalid directory"
-        [ "$dir" = "/" ] && die "directory cannot be root"
-        echo "$dir" | grep -q ^/tmp || die "directory should be temporary"
+    # Start from a clean environment
+    if [ "$cmd" = "build" ] || [ "$cmd" = "serve" ]
+    then
+        local dir
+        for dir in "$site_dir" "$bundle_dir"
+        do
+            [ -z "$dir" ] && die "invalid directory"
+            [ "$dir" = "/" ] && die "directory cannot be root"
+            echo "$dir" | grep -q ^/tmp || die "directory should be temporary"
 
-        sudo rm -rf "$dir"
-    done
+            sudo rm -rf "$dir"
+        done
 
-    mkdir -p "$site_dir" "$bundle_dir"
+        mkdir -p "$site_dir" "$bundle_dir"
+    fi
 
     rsync -auvz --exclude=".git" "$src" "${site_dir}/"
 
@@ -76,9 +80,9 @@ copy_site()
     # XXX: to podman using a different user (ns) to "$USER".
     sudo chmod 777 -R "${site_dir}"
 
-    pushd "$site_dir"
-    rm -f "Gemfile.lock"
-    popd
+    #pushd "$site_dir"
+    #sudo rm -f "Gemfile.lock"
+    #popd
 
     info "copyied site"
 }
@@ -124,15 +128,17 @@ run_container()
     # XXX: Notes:
     # XXX:
     # XXX: - The port specification - only serve to the specified host!
-    # XXX: - The bundle install seems to be required here too!
+    # XXX: - The 'bundle install' seems to be required here too!
     podman run -it --rm --name jekyll \
         -v "${site_dest}:${container_jekyll_dir}:rw,z" \
         -v "${bundle_dest}:${container_bundle_dir}:rw,z" \
         -w "${container_jekyll_site_dir}" \
         -p "${host}:${port}:${port}" \
         "${jekyll_image}" \
-        bash -c "bundle exec jekyll serve \
+        bash -c "bundle install && \
+        bundle exec jekyll serve \
         --drafts \
+        --incremental \
         --config _config.yml,_config-dev.yml \
         --host ${host} \
         --port ${port}"
@@ -150,7 +156,7 @@ handle_site()
 
     local container_bundle_dir="/usr/local/bundle"
 
-    copy_site "$src" "$site_dest" "$bundle_dest"
+    copy_site "$cmd" "$src" "$site_dest" "$bundle_dest"
 
     if [ "$cmd" = "build" ] || [ "$cmd" = "serve" ]
     then
