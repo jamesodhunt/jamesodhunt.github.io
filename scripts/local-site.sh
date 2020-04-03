@@ -53,10 +53,14 @@ copy_site()
 {
     local cmd="$1"
     local src="$2"
-    local site_dir="$3"
-    local bundle_dir="$4"
+    local site_dest="$3"
+    local bundle_dest="$4"
 
-    [ "$src" = "$site_dir" ] && die "src and site dir are the same"
+    #warn "FIXME: copy_site   : cmd: '$cmd', src: '$src', site_dest: '$site_dest', bundle_dest: '$bundle_dest'"
+
+    #die "FIXME: testing"
+
+    [ "$src" = "$site_dest" ] && die "src and site dir are the same"
 
     info "copying site"
 
@@ -64,7 +68,7 @@ copy_site()
     if [ "$cmd" = "build" ] || [ "$cmd" = "serve" ]
     then
         local dir
-        for dir in "$site_dir" "$bundle_dir"
+        for dir in "$site_dest" "$bundle_dest"
         do
             [ -z "$dir" ] && die "invalid directory"
             [ "$dir" = "/" ] && die "directory cannot be root"
@@ -73,16 +77,18 @@ copy_site()
             sudo rm -rf "$dir"
         done
 
-        mkdir -p "$site_dir" "$bundle_dir"
+        mkdir -p "$site_dest" "$bundle_dest"
     fi
 
-    rsync -auvz --exclude=".git" "$src" "${site_dir}/"
+    rsync -auvz --exclude=".git" "$src" "${site_dest}/"
 
     # XXX: Yes, this *is* required to avoid weird EPERM errors due
     # XXX: to podman using a different user (ns) to "$USER".
-    sudo chmod 777 -R "${site_dir}"
+    pushd "${site_dest}"
+    sudo chmod 777 -R .
+    popd
 
-    #pushd "$site_dir"
+    #pushd "$site_dest"
     #sudo rm -f "Gemfile.lock"
     #popd
 
@@ -158,6 +164,8 @@ handle_site()
 
     local container_bundle_dir="/usr/local/bundle"
 
+    #warn "FIXME: handle_site : cmd: '$cmd', src: '$src', site_dest: '$site_dest', bundle_dest: '$bundle_dest'"
+
     copy_site "$cmd" "$src" "$site_dest" "$bundle_dest"
 
     if [ "$cmd" = "build" ] || [ "$cmd" = "serve" ]
@@ -225,6 +233,8 @@ main()
     esac
 
     setup
+
+    #warn "FIXME: main        : cmd: '$cmd', src: '$src', site_dest: '$site_dest', bundle_dest: '$bundle_dest'"
 
     handle_site "$cmd" "$src" "$site_dest" "$bundle_dest"
 }
