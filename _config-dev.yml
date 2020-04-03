@@ -1,2 +1,7 @@
+#---------------------------------------------------------------------
+# Description: "_config-dev.yml" Jekyll configuration file for
+#   testing / local builds of GitHub.io website.
+#---------------------------------------------------------------------
+
 url: "http://127.0.0.1:4000/"
 google_analytics:
