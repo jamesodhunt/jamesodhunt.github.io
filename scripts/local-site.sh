@@ -53,8 +53,8 @@ copy_site()
 {
     local cmd="$1"
     local src="$2"
-    local site_dir="$2"
-    local bundle_dir="$3"
+    local site_dir="$3"
+    local bundle_dir="$4"
 
     info "copying site"
 
