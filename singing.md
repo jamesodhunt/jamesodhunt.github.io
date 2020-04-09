@@ -85,7 +85,7 @@ Ask the singers for their view on:
 | ~~[Zoom](https://zoom.us)~~ | Yes | No | No | |
 | ~~WhatsApp video chat~~ | Yes | No | No |
 | ~~[Jitsi](https://meet.jit.si)~~ | Yes | No | No | No sign up or account required - just create/join a session! |
-| [JamKazam][jamkazam] | Yes | Yes | possible | Free service, but unknown how reliable it is. |
+| [JamKazam][jamkazam] | Yes | Yes | possible | Free service, but unknown how reliable it is. [Servers currently very busy / overloaded][jamkazam-overloaded]. |
 | [Jamulus](http://llcon.sourceforge.net) | Yes | Yes | possible | Would require us to run our own private dedicated server. |
 
 **Notes:**
@@ -94,3 +94,5 @@ Ask the singers for their view on:
 - Duplex comms are requires to allow all singers to be heard by each other.
 
 [jamkazam]: https://www.jamkazam.com
+[jamkazam-overloaded]: https://sourceforge.net/p/llcon/discussion/533517/thread/ebb54e1b8f/?limit=25
+
