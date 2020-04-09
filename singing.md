@@ -87,6 +87,7 @@ Ask the singers for their view on:
 | ~~[Jitsi](https://meet.jit.si)~~ | Yes | No | No | No sign up or account required - just create/join a session! |
 | [JamKazam][jamkazam] | Yes | Yes | possible | Free service, but unknown how reliable it is. [Servers currently very busy / overloaded][jamkazam-overloaded]. |
 | [Jamulus](http://llcon.sourceforge.net) | Yes | Yes | possible | Would require us to run our own private dedicated server. |
+| ~~[JackTrip](https://github.com/jacktrip/jacktrip)~~ | No | Yes | No | Setup too complex for most. |
 
 **Notes:**
 
