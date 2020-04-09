@@ -16,18 +16,21 @@ session.
 | Computer | Dedicated laptop or desktop | smartphone | |
 | Microphone ("mic") | External plug-in mic<br/>(USB or standard 3.5mm jack) | Use built-in mic on computer / phone | A good quality external mic is going to provide superior sound input. |
 | Headphones | Pair of "over the ear" headphones<br/>(USB or standard 3.5mm jack) |  "in the ear" headphones / buds | Required to minimise background noise and hear the rest of the singers as clearly as possible. |
+| Network connection | Ethernet cable | wifi! | Most routers / wifi hubs have one or more [Ethernet](https://en.wikipedia.org/wiki/Ethernet) sockets on the back. Having a wired connection between your computer and the router provides a more **reliable** and generally **faster** link to the internet. |
 
 ## Software
 
-- [Install Zoom](https://zoom.us/download) on your device.
-- Test it works with your mic and headphones.
+- Register for the free [JamKazam][jamkazam] service.
+- Download the free JamKazam application for Windows or MacOS.
 
-> **Tip:**
->
-> Zoom can be rather *too* clever sometimes and may not use the default system
-> "input" (mic) and output (speakers / headphone) device. Check by looking at
-> the Zoom settings to ensure you really are using your external microphone
-> for example.
+## Initial setup
+
+- Plugin your headphones and microphone.
+- Start the JamKazam application and login.
+- Click the menu button next to your name (top right).
+- Click "Audio Gear" and follow the instructions to "Add New Gear".
+- Click the menu button again.
+- Click "Test Network", then "Start network test".
 
 # Singing session
 
@@ -35,16 +38,17 @@ session.
 
 Check the following:
 
-- *Ideally*, no other application or apps are running on your device
+- *Ideally*, no other applications or apps are running on your device
 
   So close down your web browser, mail client, games, *etc*.
 
   > **Note:**
   >
   > This includes things like system updates which can really slow down the
-  > system and use up your network bandwidth).
+  > system and use up your network bandwidth. Consider applying updates a few
+  > hours before the meeting and rebooting after the updates complete.
 
-- Your microphone and headphones are working.
+- Your microphone and headphones are plugged in and working.
 
 ## On joining a session
 
@@ -69,13 +73,19 @@ Ask the singers for their view on:
 
 # Appendices
 
-## Alternatives to Zoom
+## Software Options
 
-If Zoom isn't good enough, the best alternatives are:
+| Application | Opus codec? | Duplex comms? | Viable? | Notes |
+|-|-|-|-|-|
+| ~~[Zoom](https://zoom.us)~~ | Yes | No | No | |
+| ~~WhatsApp video chat~~ | Yes | No | No |
+| ~~[Jitsi](https://meet.jit.si)~~ | Yes | No | No | No sign up or account required - just create/join a session! |
+| [JamKazam][jamkazam] | Yes | Yes | possible | Free service, but unknown how reliable it is. |
+| [Jamulus](http://llcon.sourceforge.net) | Yes | Yes | possible | Would require us to run our own private dedicated server. |
 
-| Application | Uses Opus codec? | Notes |
-|-|-|-|
-| WhatsApp video chat | Yes | |
-| [Jitsi](https://meet.jit.si) | Yes | No sign up or account required - just create/join a session! |
+**Notes:**
 
-Again, video needs to be disabled for these.
+- Opus is the *de facto* and best audio codec available.
+- Duplex comms are requires to allow all singers to be heard by each other.
+
+[jamkazam]: https://www.jamkazam.com
