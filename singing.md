@@ -28,9 +28,14 @@ session.
 - Plugin your headphones and microphone.
 - Start the JamKazam application and login.
 - Click the menu button next to your name (top right).
-- Click "Audio Gear" and follow the instructions to "Add New Gear".
+- Click "Audio Gear" and follow the instructions to "Add new gear".
 - Click the menu button again.
 - Click "Test Network", then "Start network test".
+
+  > **Note:**
+  >
+  > Unfortunately, this facility seems somewhat unreliable as sometimes it
+  > reports, "No network test servers are available".
 
 # Singing session
 
