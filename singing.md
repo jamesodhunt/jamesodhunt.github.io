@@ -87,7 +87,7 @@ Ask the singers for their view on:
 | [JamKazam][jamkazam] | [Opus][opus] | Yes | Yes | No | possible | Free service, but unknown how reliable it is.<br/><br/>[Servers currently very busy / overloaded][jamkazam-overloaded]. |
 | [Jamulus](http://llcon.sourceforge.net) | [Opus][opus] | Yes | Yes | Yes | possible | Would require us to run our own dedicated private server. |
 | ~~[Jitsi](https://meet.jit.si)~~ | [Opus][opus] | No | Yes | Yes | No | No sign up or account required - just create/join a session! |
-| [Ninjam](https://www.cockos.com/ninjam) | [OGG Vorbis][vorbis] | Yes | Yes | Yes | maybe | **Warning:** Public servers appear to auto-upload **all** recordings to a https://archive.org!<br/><br/>We could run it on a dedicated private server though. |
+| [Ninjam](https://www.cockos.com/ninjam) | [OGG Vorbis][vorbis] | Yes | Yes | Yes | maybe | **Warning:** Public servers appear to auto-upload **all** recordings to https://archive.org!<br/><br/>We could run it on a dedicated private server though. |
 | ~~WhatsApp video~~ | [Opus][opus] | No | Yes | No | No |
 | ~~[Zoom][zoom]~~ | [Opus][opus] | No | Yes | No | No | |
 
