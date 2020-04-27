@@ -88,3 +88,4 @@ exclude:
   - Gemfile
   - Makefile
   - /scripts/
+  - TODO
