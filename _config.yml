@@ -89,3 +89,4 @@ exclude:
   - Makefile
   - /scripts/
   - TODO
+  - vendor
