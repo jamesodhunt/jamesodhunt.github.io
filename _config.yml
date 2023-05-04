@@ -67,6 +67,10 @@ author:
       icon: "fab fa-fw fa-linkedin"
       url: "https://linkedin.com/in/jamesodhunt"
 
+    - label: "mastodon"
+      icon: "fab fa-fw fa-mastodon"
+      url: "https://mastodon.social/@jamesodhunt"
+
     - label: "twitter"
       icon: "fab fa-fw fa-twitter-square"
       url: "https://twitter.com/jamesodhunt"
