@@ -39,8 +39,8 @@ defaults:
 author:
   name: James Hunt
   avatar: https://avatars3.githubusercontent.com/jamesodhunt
-  bio: Open Source Software hacker
-    @ [Intel](https://01.org).
+  bio: Software hacker
+    @ Nvidia.
   location: "Earth, except on weekends"
   links: &links
     - label: "blog"
@@ -57,7 +57,7 @@ author:
 
     - label: "github (work)"
       icon: "fab fa-fw fa-github"
-      url: "http://github.com/jodh-intel"
+      url: "http://github.com/jodh-nvidia"
 
     - label: "instagram"
       icon: "fab fa-fw fa-instagram"
